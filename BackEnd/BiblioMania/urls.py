@@ -13,4 +13,5 @@ router.register('suscripcion', SuscripcionViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+
 ]
