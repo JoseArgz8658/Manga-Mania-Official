@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // Función para cargar opciones de manga dinámicamente
     function cargarOpcionesManga() {
         $.ajax({
             url: 'http://localhost:8000/BiblioMania/manga/',
@@ -18,7 +17,7 @@ $(document).ready(function () {
         });
     }
 
-    cargarOpcionesManga(); // Cargar opciones de manga al cargar la página
+    cargarOpcionesManga();
 
     $("#resenaForm").validate({
         submitHandler: function (form) {
@@ -34,7 +33,6 @@ $(document).ready(function () {
                 contentType: 'application/json',
                 success: function (response) {
                     alert('Reseña guardada correctamente');
-                    // Limpiar formulario después de éxito si es necesario
                     form.reset();
                 },
                 error: function (error) {
