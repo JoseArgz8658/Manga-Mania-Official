@@ -13,6 +13,10 @@
 
     <link rel="stylesheet" href="/FrontEnd/CSS/EstilosUser.css"> <!-- Llamar Style deseado -->
     <link rel="website icon" type="image/png" href="/FrontEnd/Images/LogoMangaMania.png"> <!-- Llamar el logo de la página -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="/FrontEnd/JavaScript/myAPIInicioSesion.js"></script>
 </head>
 
 <body> <!-- Cuerpo del código -->
@@ -31,41 +35,24 @@
                 <a class="navbar-brand" href="/FrontEnd/HTML/Pages/Pag Mangas.html"><i class="bi bi-book"></i> Mangas</a>
                 <a class="navbar-brand" href="/FrontEnd/HTML/Pages/Pag Categorias.html"><i class="bi bi-tags"></i> Categoría</a>
                 <a class="navbar-brand" href="/FrontEnd/HTML/Pages/Pag_Populares.html"><i class="bi bi-star"></i> Popular</a>
+                <a class="navbar-brand" href="/FrontEnd/HTML/Pages/Pag_Suscripccion.html"><i class="bi bi-shop"></i> Suscripccion</a>
             </div>
         </nav> <br>
-
-
-        <div class="container fondoForm">
-            <form id="miFormulario" class="formulario">
-                <div class="formulario__grupo" id="grupo__gmail">
-                    <label for="gmail" class="formulario__label">Correo Electronico</label>
-                    <div class="formulario__grupo-input">
-                        <input type="email" class="formulario__input" name="gmail" id="gmail" class="formulario__input" placeholder="correo@correo.com" required>
-                        <i class="formulario__validacion-estado bi"></i>
-                    </div>
-                    <p class="formulario__input-error">El correo debe ser valido.</p>
+        <!-- Inicio de Formulario InicioSesion -->
+         <div class="container">
+            <form id="loginForm" class="mt-4">
+                <div class="form-group">
+                    <label for="loginUsername">Username</label>
+                    <input type="text" class="form-control" id="loginUsername" placeholder="Username" required>
                 </div>
-
-                <div class="formulario__grupo" id="grupo__password">
-                    <label for="password" class="formulario__label">Contraseña</label>
-                    <div class="formulario__grupo-input">
-                        <input type="password" class="formulario__input" name="password" id="password"class="formulario__input" placeholder="Ingrese su Contraseña" required>
-                        <i class="formulario__validacion-estado bi"></i>
-                    </div>
-                    <p class="formulario__input-error">La contraseña debe tener entre 4 y 12 caracteres.</p>
-                </div>
-
-                <div class="formulario__mensaje" id="formulario__mensaje">
-                    <p>Error: Por favor rellena el formulario correctamente.</p>
-                </div>
-
-                <div class="formulario__grupo formulario__grupo-btn-enviar">
-                    <button type="submit" class="formulario__btn">Iniciar Sesión</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                </div><br>
+                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
             </form>
         </div>
-
+        <!-- Termino de Formulario InicioSesion -->
     </main> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer> <!-- Pie de código -->
@@ -73,6 +60,5 @@
             <img class="logo" src="/FrontEnd/Images/LogoMangaMania.png" alt="LogoMangaMania">
             <h1>MangaMania || Inicio de Sesión</h1>
         </div>
-        <script src="/FrontEnd/JavaScript/ses2.js"></script>
     </footer>
 </html>
