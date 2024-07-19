@@ -192,8 +192,28 @@
                 </div><br>
                 <button type="submit" class="btn btn-primary btn-block">Guardar Reseña</button>
             </form>
-        </div>                
+        </div>
         <!-- Termino Formulario Reseña -->
+        <!-- Inicio Tabla registros de Reseñas -->
+        <div class="container">
+            <div class="mt-4">
+                <h3>Registros de Reseñas</h3>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Manga</th>
+                            <th>Rating</th>
+                            <th>Comentario</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resenaTableBody">
+                        <!-- Aquí se cargarán las reseñas -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Termino Tabla registros de Reseñas -->
          <hr>
         <!-- Inicio Formulario Autor -->
          <div class="container">
@@ -250,7 +270,7 @@
                     <label for="author">Autor</label>
                     <select class="form-control" id="author" required>
                         <option value="">Selecciona un autor</option>
-                        <!-- Se cargara aqui -->
+                        <!-- Se cargará aquí -->
                     </select>
                 </div>
                 <div class="form-group">
@@ -267,7 +287,8 @@
                         <option value="E">En emisión</option>
                         <option value="F">Finalizado</option>
                     </select>
-                </div><br>
+                </div>
+                <br>
                 <button type="submit" class="btn btn-primary btn-block">Guardar Manga</button>
             </form>
         </div>

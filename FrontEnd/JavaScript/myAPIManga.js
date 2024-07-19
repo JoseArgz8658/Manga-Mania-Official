@@ -1,4 +1,21 @@
 $(document).ready(function () {
+    function cargarAutores() {
+        $.ajax({
+            url: 'http://localhost:8000/BiblioMania/autor/',
+            type: 'GET',
+            success: function (data) {
+                var options = '<option value="">Selecciona un autor</option>';
+                data.forEach(function (autor) {
+                    options += '<option value="' + autor.id + '">' + autor.name + '</option>';
+                });
+                $('#author').html(options);
+            },
+            error: function (error) {
+                console.log('Error al cargar autores:', error);
+            }
+        });
+    }
+
     function cargarMangas() {
         $.ajax({
             url: 'http://localhost:8000/BiblioMania/manga/',
@@ -22,6 +39,7 @@ $(document).ready(function () {
         });
     }
 
+    cargarAutores();
     cargarMangas();
 
     $("#mangaForm").validate({
